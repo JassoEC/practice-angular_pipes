@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-pipes';
 
-  name = 'emanuel';
+  name = 'emanuel campos jasso';
 
   changeName() {
     console.log(this.name);

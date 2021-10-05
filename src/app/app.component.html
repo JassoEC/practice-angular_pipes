@@ -7,5 +7,16 @@
     type="button"
     label="Change name"
     (click)="changeName()"
+    class="p-button-help"
+    icon="pi pi-bell"
+    iconPos="right"
   ></button>
+
+  <p-card
+    [style]="{ width: '25rem', marginTop: '10px' }"
+    [header]="name | titlecase"
+    subheader="Tarjeta de presentación"
+  >
+    Hola desde Prime NG
+  </p-card>
 </div>
