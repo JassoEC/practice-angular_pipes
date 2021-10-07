@@ -35,6 +35,13 @@
         <li>fecha | date: "long"</li>
         <li>fecha | date: "MMMM"</li>
       </ul>
+      <hr />
+
+      <ul>
+        <li>currentDate | date: "long":"GMT-6":"es-MX"</li>
+        <li>currentDate | date: "long":"GMT-4"</li>
+        <li>currentDate | date: "long":"GMT-4":"fr"</li>
+      </ul>
     </p-card>
   </div>
   <div class="col-6">
@@ -45,6 +52,13 @@
         <li>{{ currentDate | date: "short" }}</li>
         <li>{{ currentDate | date: "long" }}</li>
         <li>{{ currentDate | date: "MMMM dd, yyyy" }}</li>
+      </ul>
+      <hr />
+
+      <ul>
+        <li>{{ currentDate | date: "long":"GMT-6":"es-MX" }}</li>
+        <li>{{ currentDate | date: "long":"GMT-4" }}</li>
+        <li>{{ currentDate | date: "long":"GMT-4":"fr" }}</li>
       </ul>
     </p-card>
   </div>

@@ -10,9 +10,11 @@ import { SalesModule } from './sales/sales.module';
 // Cambiar locale de forma global
 
 import localMX from '@angular/common/locales/es-MX';
+import localFR from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
 
 registerLocaleData(localMX);
+registerLocaleData(localFR);
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, AppRouterModule, SharedModule, SalesModule],
