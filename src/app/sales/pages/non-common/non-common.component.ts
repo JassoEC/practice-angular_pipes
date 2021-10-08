@@ -16,7 +16,7 @@ export class NonCommonComponent {
   };
 
   //i18nPlural
-  clients: string[] = ['Michelle', 'Emanuel', 'ana'];
+  clients: string[] = ['Michelle', 'Emanuel', 'Ana', 'Jose'];
 
   clientsMap = {
     '=0': 'Sin clientes en espera',
