@@ -32,4 +32,12 @@ export class NonCommonComponent {
     this.name = 'Michelle';
     this.gender = 'female';
   };
+
+  // Key value pipe
+
+  employee = {
+    name: 'Emanuel',
+    age: 27,
+    address: 'Lago de chapala',
+  };
 }
