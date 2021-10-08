@@ -7,10 +7,29 @@ import { Component } from '@angular/core';
 })
 export class NonCommonComponent {
   name: string = 'Emanuel';
-  gender: string = 'female';
+  gender: string = 'male';
 
+  //i18nSelect
   invitation = {
     male: 'invitarlo',
     female: 'invitarla',
+  };
+
+  //i18nPlural
+  clients: string[] = ['Michelle', 'Emanuel', 'ana'];
+
+  clientsMap = {
+    '=0': 'Sin clientes en espera',
+    '=1': 'Un cliente en espera',
+    other: 'tenemos # clientes esperando',
+  };
+
+  deleteClient = () => {
+    this.clients.pop();
+  };
+
+  changeClient = () => {
+    this.name = 'Michelle';
+    this.gender = 'female';
   };
 }
