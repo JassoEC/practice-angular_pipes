@@ -40,4 +40,21 @@ export class NonCommonComponent {
     age: 27,
     address: 'Lago de chapala',
   };
+
+  // Json pipe
+
+  heroes = [
+    {
+      name: 'Batman',
+      fly: true,
+    },
+    {
+      name: 'Aquaman',
+      fly: true,
+    },
+    {
+      name: 'Robin',
+      fly: true,
+    },
+  ];
 }
