@@ -57,4 +57,12 @@
       <pre>{{ heroes | json }}</pre>
     </p-fieldset>
   </div>
+  <div class="col-6 lg:col-6">
+    <p-fieldset legend="Async pipe" [toggleable]="true">
+      <pre>Pipe async</pre>
+      <!-- <p>{{ myObservable | async }}</p> -->
+      <pre *ngIf="!(myProm | async)">Resolviendo promesa</pre>
+      <p>{{ myProm | async }}</p>
+    </p-fieldset>
+  </div>
 </div>

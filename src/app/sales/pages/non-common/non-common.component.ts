@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-non-common',
@@ -57,4 +58,14 @@ export class NonCommonComponent {
       fly: true,
     },
   ];
+
+  // Async pipe
+
+  myObservable = interval(1000);
+
+  myProm = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Data de promesa');
+    }, 3000);
+  });
 }
