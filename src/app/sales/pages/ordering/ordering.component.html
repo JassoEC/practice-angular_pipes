@@ -1,1 +1,11 @@
-<p>ordering works!</p>
+<div class="text-layout">
+  <h1>Pipes personalizados</h1>
+  <p>Los pipes de la {{ "casa" | customUppercase: toggleUpper }}</p>
+
+  <button
+    pButton
+    label="Toggle Upper"
+    class="p-button-text p-button-text"
+    (click)="changeToggleUpper()"
+  ></button>
+</div>

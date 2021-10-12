@@ -5,6 +5,7 @@ import { NonCommonComponent } from './pages/non-common/non-common.component';
 import { BasicsComponent } from './pages/basics/basics.component';
 import { OrderingComponent } from './pages/ordering/ordering.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { CustomUpperCasePipe } from './pipes/cutomUppercase.pipe';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
     NonCommonComponent,
     BasicsComponent,
     OrderingComponent,
+    CustomUpperCasePipe,
   ],
   imports: [CommonModule, PrimeNgModule],
   exports: [
