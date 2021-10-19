@@ -60,3 +60,30 @@
     </p-table>
   </div>
 </div>
+
+<div class="grid mt-2">
+  <div class="col">
+    <p-table [value]="heroes" responsiveLayout="scroll">
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="name">
+            Nombre<p-sortIcon field="Nombre"></p-sortIcon>
+          </th>
+          <th pSortableColumn="flying">
+            Vuela<p-sortIcon field="Vuela"></p-sortIcon>
+          </th>
+          <th pSortableColumn="color">
+            Color<p-sortIcon field="Color"></p-sortIcon>
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-heroe>
+        <tr>
+          <td>{{ heroe.name }}</td>
+          <td>{{ heroe.flying | heroFly | titlecase }}</td>
+          <td>{{ heroe.color }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
