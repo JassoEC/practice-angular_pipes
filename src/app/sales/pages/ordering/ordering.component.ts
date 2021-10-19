@@ -9,6 +9,8 @@ import { Color, Hero } from '../../sales.interfaces';
 export class OrderingComponent {
   toggleUpper = false;
 
+  orderBy: keyof Hero = 'name';
+
   heroes: Hero[] = [
     { name: 'SuperMaan', flying: true, color: Color.red },
     { name: 'Batman', flying: false, color: Color.black },
@@ -19,5 +21,9 @@ export class OrderingComponent {
 
   changeToggleUpper() {
     this.toggleUpper = !this.toggleUpper;
+  }
+
+  setOrderBy(value: keyof Hero) {
+    this.orderBy = value;
   }
 }

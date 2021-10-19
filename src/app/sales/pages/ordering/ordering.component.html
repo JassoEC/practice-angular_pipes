@@ -14,38 +14,47 @@
       (click)="changeToggleUpper()"
     ></button>
 
-    <button pButton icon="pi pi-sort" label="Por nombre" class="mr-2"></button>
+    <button
+      pButton
+      icon="pi pi-sort"
+      label="Por nombre"
+      class="mr-2"
+      (click)="setOrderBy('name')"
+    ></button>
 
     <button
       pButton
       icon="pi pi-sort"
       label="Valores"
       class="p-button-success mr-2"
+      (click)="setOrderBy('flying')"
     ></button>
+
     <button
       pButton
       icon="pi pi-sort"
       label="Por color"
       class="p-button-warning"
+      (click)="setOrderBy('color')"
     ></button>
   </div>
 </p-toolbar>
 
 <div class="grid mt-2">
   <div class="col">
-    <p-table [value]="heroes | order" responsiveLayout="scroll">
+    <p-table [value]="heroes | order: orderBy" responsiveLayout="scroll">
       <ng-template pTemplate="header">
         <tr>
           <th>Nombnre</th>
           <th>Vuela</th>
-          <th>Color</th>          
+          <th>Color</th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-heroe>
         <tr>
           <td>{{ heroe.name }}</td>
-          <td>{{ heroe.flying | heroFly | titlecase}}</td>
-          <td>{{ heroe.color }}</td>          
+          <td>{{ heroe.flying | heroFly | titlecase }}</td>
+          <td>{{ heroe.color }}</td>
         </tr>
       </ng-template>
     </p-table>

@@ -5,8 +5,8 @@ import { Hero } from '../sales.interfaces';
   name: 'order',
 })
 export class OrderPipe implements PipeTransform {
-  transform(value: Hero[]): Hero[] {
-    value = value.sort((a, b) => (a.name > b.name ? 1 : -1));
+  transform(value: Hero[], orderBy: keyof Hero = 'name'): Hero[] {
+    value = value.sort((a, b) => (a[orderBy] > b[orderBy] ? 1 : -1));
 
     return value;
   }
