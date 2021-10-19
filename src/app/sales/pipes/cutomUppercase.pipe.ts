@@ -8,3 +8,4 @@ export class CustomUpperCasePipe implements PipeTransform {
     return toUpper ? value.toUpperCase() : value.toLowerCase();
   }
 }
+  
